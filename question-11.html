@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+
+    <script>
+    	// it runs only ones
+       function doStuff() {
+		alert("run your code here when time interval is reached");
+		}
+		var myTimer = setTimeout(doStuff, 5000);
+     
+      // it repeats the call
+      function doStuff() {
+		alert("run your code here when time interval is reached");
+		}
+		var myTimer = setInterval(doStuff, 5000);
+    </script>
+</head>
+
+<body>
+    
+<div id="test">
+  <p>set timeout function allows us to run a function once after the interval of time. while setInterval function allows us to run a function repeatedly, starting after the interval of time, then repeating continuously at that interval.</p>
+  
+
+</div>
+
+</body>
+</html>
