@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+
+    <script>
+     
+     function show(){
+        function fact(n)
+        {
+         if(n==1)
+          return 1;
+         else
+          return n * fact(n-1);
+        }
+
+        var rValue = fact(3);
+        document.write(rValue); 
+                var i, number, factorial;
+                factorial=1;
+                number=Number(document.getElementById("num").value);
+                for(i=1; i<=number; i++)  
+                {
+                factorial= factorial*i;
+                }  
+                document.getElementById("answer").value= factorial;
+                }
+                
+    </script>
+</head>
+
+<body>
+    
+<div id="test" style="border: 1px solid black;height:200px;width:200px;" onclick="fact()">
+ 
+ <input id="num">
+<button onclick="show()">Click</button>
+<input id="answer">
+</div>
+
+
+</body>
