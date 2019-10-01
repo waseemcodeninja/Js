@@ -1,0 +1,17 @@
+<script>
+// Q# 3 print out this sequence dynamically 0,1,1,2,3,5,8,13,21,......
+
+    function fib(n)
+    {
+      const fibarray = [0, 1];
+
+      for(var i = 2; i<=n; i++){
+
+        fibarray.push(fibarray[i-2] + fibarray[i-1]);
+
+      }
+      return fibarray;
+ 
+    }
+	console.log(fib(10));
+</script>
