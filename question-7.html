@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>JavaScript</title>
+<script>
+function myfun() {
+            var strText = document.getElementById("input4").value;          
+            var strText1 = document.getElementById("input5").value;
+            var coun = document.getElementById("inputState").value;
+            var form = document.getElementById("form");
+            var lang = document.getElementById("check");
+           
+            
+
+            alert("Name :" + strText + "\n Age: " + strText1 + "\n Country "+ coun + "\n Gender "+ form.elements["myCheck"].value + "\n Language "+ lang.elements["lang-1"].value );
+            
+             
+        }
+
+</script>
+</head>
+
+<body>
+
+<div id="">
+        <form id="form">
+                <div class="form-row mt-5 mx-auto">
+                        <div class="form-group col-md-4">
+                         
+                          <input type="text" class="form-control" id="input4" placeholder="Name">
+                        </div>
+                        <div class="form-group col-md-4">
+                               
+                                <input type="text" class="form-control" id="input5" placeholder="Age">
+                         </div>
+                         <div class="form-group col-md-4">
+                               
+                                <select id="inputState" class="form-control">
+                                  <option selected>Pakistan</option>
+                                  <option>Iran</option>
+                                  <option>America</option>
+                                </select>
+                        </div>
+                        <div class="row ml-3">
+                          <div class="form-check col-md-6">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="myCheck" value="Male" checked>
+                            <label class="form-check-label" for="exampleRadios1"> Male </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="myCheck" value="Female">
+                            <label class="form-check-label" for="exampleRadios2"> Female </label>
+                          </div>
+                       
+                        <div class="form-group col-md-6" id="check">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" id="lang-1" value="HTML">
+                                  <label class="form-check-label" for="gridCheck">HTML</label>
+                                </div>
+                              
+                                <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="lang-1" value="CSS">
+                                        <label class="form-check-label" for="gridCheck">CSS</label>
+                                </div>
+                                <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="lang-1" value="JAVASCRIPT">
+                                        <label class="form-check-label" for="gridCheck">JAVASCRIPT</label>
+                                </div>
+                        </div>
+                    </div>
+                      </div>
+                     
+                      <button onclick="myfun()" type="submit" class="btn btn-primary">Submit</button>     
+                
+        </form>
+        
+</div>
+<!-- <div id="test" style="border:1px solid black;height:200px;width:200px;">
+
+</div> -->
+
+<script src="position.js"></script>
+</body>
+</html>
