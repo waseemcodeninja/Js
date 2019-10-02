@@ -1,46 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JavaScript</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Merge Sort</title>
 
-    <script>
+	<script>
+	var array = [4,10,9,66,8,7,15,20,-15,-25,16,1,0,13,15];
+	  
+	 var LeftArray;
+	 var RightArray;
+	 var arrayLength = array.length;
 
-		// Q#4 Merge sort of an array
- function merge(arrA,arrB) {
-		let singleSorted = [];
-		while (arrA.length && arrB.length) {
-			if (arrA[0] < arrB[0]) {
-				singleSorted.push(arrA[0]);
-				arrA.shift();
-			} else {
-				singleSorted.push(arrB[0]);
-				arrB.shift();
-			}
-		}
-		return singleSorted.concat(arrA,arrB);
+
+	 for (var i = 0; i < arrayLength; i++) 
+	 {
+			 midOfArray = Math.floor(arrayLength/2);
+			 LeftArray = array.slice(0,midOfArray);
+			 RightArray = array.slice(midOfArray); 
+				 
+	 }
+	
+	 //Left Array
+	 if(LeftArray.length>2) {
+		
+	 
+	 for(var z =0 ;z<=LeftArray.length-1;z++)
+	 {
+		 for(var j = 0 ; j<=LeftArray.length-1;j++)
+		 {
+
+					if (LeftArray[j] > LeftArray[j+1]) 
+					{
+
+						var temp = LeftArray[j];
+						LeftArray[j] = LeftArray[j+1];
+						LeftArray[j+1] = temp;
+					  
+					}
+				 
+			 
+		 }
+	}
 }
+	//Right Array
+	if(RightArray.length>2) {
+	for(var y =0 ; y<=RightArray.length-1; y++)
+	{
+		 for(var k = 0 ; k<=RightArray.length-1;k++)
+		 {
 
-function mergeSort(arr) {
-		if (arr.length < 2) {
-			return arr;
+					if (RightArray[k] > RightArray[k+1]) 
+					{
+
+						var temp = RightArray[k];
+						RightArray[k] = RightArray[k+1];
+						RightArray[k+1] = temp;
+					  
+					}
+				
+		 }
+	}
+	 
+ }		  
+	var result = RightArray.concat(LeftArray);
+	for(var n=0;n<result.length-1;n++)
+	{
+		for(var m=0 ; m<result.length-1;m++)
+		{
+
+		  if (result[m] > result[m+1]) 
+					{
+
+						var temp = result[m];
+						result[m] = result[m+1];
+						result[m+1] = temp;
+					  
+					}	
+
 		}
-		let midPoint = Math.floor(arr.length / 2);
-		let left = mergeSort(arr.slice(0,midPoint));
-		let right = mergeSort(arr.slice(midPoint));
-		return merge(left,right);
-}
+	}
 
+   console.log(result);
 
-console.log(mergeSort([4,10,8,7,15,20,16,1,0,13,15]));
-
-    </script>
+	</script>
 </head>
 
 <body>
-    
+	
 <div id="test">
 
 </div>
