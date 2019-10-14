@@ -8,37 +8,27 @@
 
     <script>
      
-     function show(){
-        function fact(n)
-        {
-         if(n==1)
-          return 1;
-         else
-          return n * fact(n-1);
-        }
+    function factorial(n) 
+      {
+          if (n == 0 || n == 1) 
+          {
+              return 1;
+          }
+          
+          return n * factorial(n - 1);
+      }
 
-        var rValue = fact(3);
-        document.write(rValue); 
-                var i, number, factorial;
-                factorial=1;
-                number=Number(document.getElementById("num").value);
-                for(i=1; i<=number; i++)  
-                {
-                 factorial= factorial*i;
-                }  
-                document.getElementById("answer").value= factorial;
-                }
-                
+      document.write(factorial(5));
+
     </script>
 </head>
 
 <body>
     
-<div id="test" style="border: 1px solid black;height:200px;width:200px;" onclick="fact()">
+<div id="test">
  
- <input id="num">
-<button onclick="show()">Click</button>
-<input id="answer">
+
+
 </div>
 
 

@@ -11,78 +11,109 @@
 	  
 	 var LeftArray;
 	 var RightArray;
-	 var arrayLength = array.length;
+	 // var arrayLength = array.length;
 
 
-	 for (var i = 0; i < arrayLength; i++) 
-	 {
-			 midOfArray = Math.floor(arrayLength/2);
-			 LeftArray = array.slice(0,midOfArray);
-			 RightArray = array.slice(midOfArray); 
+	 // for (var i = 0; i < arrayLength; i++) 
+	 // {
+		// 	 midOfArray = Math.floor(arrayLength/2);
+		// 	 LeftArray = array.slice(0,midOfArray);
+		// 	 RightArray = array.slice(midOfArray); 
 				 
-	 }
+	 // }
 	
+  function recursive(array) 
+  {
+  	
+	  	 if (array.length < 1) 
+	  	 {
+
+            return array;
+
+         } 
+         else 
+         {
+
+           midOfArray = Math.floor(arrayLength/2);
+		   LeftArray = array.slice(0,midOfArray);
+		   RightArray = array.slice(midOfArray);   
+   
+	  	   recursive(LeftArray);
+	  	   recursive(RightArray);
+
+        }
+
+        return merge(LeftArray,RightArray);
+
+        
+
+  }
 	 //Left Array
-	 if(LeftArray.length>2) {
-		
-	 
-	 for(var z =0 ;z<=LeftArray.length-1;z++)
-	 {
-		 for(var j = 0 ; j<=LeftArray.length-1;j++)
-		 {
+	
+	function merge(LeftArray,RightArray,result)
+	{
+			 for(var z =0 ;z<=LeftArray.length-1;z++)
+			 {
+				 for(var j = 0 ; j<=LeftArray.length-1;j++)
+				 {
 
-					if (LeftArray[j] > LeftArray[j+1]) 
-					{
+							if (LeftArray[j] > LeftArray[j+1]) 
+							{
 
-						var temp = LeftArray[j];
-						LeftArray[j] = LeftArray[j+1];
-						LeftArray[j+1] = temp;
-					  
-					}
-				 
-			 
-		 }
-	}
-}
+								var temp = LeftArray[j];
+								LeftArray[j] = LeftArray[j+1];
+								LeftArray[j+1] = temp;
+							  
+							}
+						 
+					 
+				 }
+			}
+
+
 	//Right Array
-	if(RightArray.length>2) {
-	for(var y =0 ; y<=RightArray.length-1; y++)
-	{
-		 for(var k = 0 ; k<=RightArray.length-1;k++)
-		 {
+	
+			for(var y =0 ; y<=RightArray.length-1; y++)
+			{
+				 for(var k = 0 ; k<=RightArray.length-1;k++)
+				 {
 
-					if (RightArray[k] > RightArray[k+1]) 
-					{
+							if (RightArray[k] > RightArray[k+1]) 
+							{
 
-						var temp = RightArray[k];
-						RightArray[k] = RightArray[k+1];
-						RightArray[k+1] = temp;
-					  
-					}
-				
-		 }
-	}
-	 
- }		  
-	var result = RightArray.concat(LeftArray);
-	for(var n=0;n<result.length-1;n++)
-	{
-		for(var m=0 ; m<result.length-1;m++)
-		{
+								var temp = RightArray[k];
+								RightArray[k] = RightArray[k+1];
+								RightArray[k+1] = temp;
+							  
+							}
+						
+				 }
+			}
+	
+ 		  
+			var result = RightArray.concat(LeftArray);
+			for(var n=0;n<result.length-1;n++)
+			{
+				for(var m=0 ; m<result.length-1;m++)
+				{
 
-		  if (result[m] > result[m+1]) 
-					{
+				  if (result[m] > result[m+1]) 
+							{
 
-						var temp = result[m];
-						result[m] = result[m+1];
-						result[m+1] = temp;
-					  
-					}	
+								var temp = result[m];
+								result[m] = result[m+1];
+								result[m+1] = temp;
+							  
+							}	
 
-		}
-	}
+				}
+			}
+			 console.log(result);
 
-   console.log(result);
+			
+}
+
+  
 
 	</script>
 </head>
