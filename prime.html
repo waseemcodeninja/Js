@@ -1,0 +1,40 @@
+<script>
+
+function isprime(num)
+{
+ 
+	 var i;
+	 var num;
+
+	 for(i=2;i<=num;i++)
+	 {
+	 	if (num%i===0) 
+	 	{ 
+	 		// document.write("This " + num + " is not a prime number");
+	 		return false;
+	 	}
+	 	    // document.write("This " + num + " is a prime number");
+	 		return true;
+	 }
+	 
+	 
+
+}
+
+var length=50;
+var prime_arr=[];
+
+for(var i=1; prime_arr.length<length;i++)
+{
+	
+	 if(isprime(i)==true) 
+	 {
+	 	prime_arr.push(i);
+	 }
+}
+
+console.log(prime_arr);
+
+
+
+</script>
