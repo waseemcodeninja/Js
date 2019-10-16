@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Js</title>
+	<script>
+	var day = prompt('Enter 0 for all sundays \n 1 for all mondays \n 2 for all tuesdays \n 3 for all wednesdays \n 4 for all thrusdays \n 5 for all fridays \n 6 for all saturdays');
+	if (day==0) 
+	{
+		function getSundays()
+		 {
+		    var d = new Date();
+		    var month = d.getMonth() +1;
+		    var sundays = [];
+
+		    d.setDate(1);
+
+		    
+		    while (d.getDay() !== 0) 
+		    {
+		        d.setDate(d.getDate() + 1);
+		    }
+
+		   
+		    while (d.getMonth()+1 === month) 
+		    {
+		        sundays.push(new Date(d.getTime()));
+		        d.setDate(d.getDate() + 7);
+		    }
+		    document.write(sundays + "<br>");
+	     }
+           getSundays();
+	}
+
+	else if (day == 1) 
+	{
+
+		function getMondays()
+		 {
+	       var d = new Date();
+	       var month = d.getMonth() +1;
+	       var mondays = [];
+
+	      d.setDate(1);
+
+	    
+	    while (d.getDay() !== 1) 
+	    {
+	        d.setDate(d.getDate() + 1);
+	    }
+
+	   
+	    while (d.getMonth()+1 === month) 
+	    {
+	        mondays.push(new Date(d.getTime()));
+	        d.setDate(d.getDate() + 7);
+	    }
+	    document.write(mondays + "<br>");
+	}
+     getMondays();
+}
+
+else if (day==2) {
+	    function getTuesdays()
+		 {
+	       var d = new Date();
+	       var month = d.getMonth() +1;
+	       var tuesdays = [];
+
+	      d.setDate(1);
+
+	    
+	    while (d.getDay() !== 2) 
+	    {
+	        d.setDate(d.getDate() + 1);
+	    }
+
+	   
+	    while (d.getMonth()+1 === month) 
+	    {
+	        tuesdays.push(new Date(d.getTime()));
+	        d.setDate(d.getDate() + 7);
+	    }
+	    document.write(tuesdays + "<br>");
+	}
+     getTuesdays();
+}
+
+else if(day==3) {
+
+		function getWednesday()
+		 {
+	       var d = new Date();
+	       var month = d.getMonth() +1;
+	       var wednesdays = [];
+
+	      d.setDate(1);
+
+	    
+	    while (d.getDay() !== 3) 
+	    {
+	        d.setDate(d.getDate() + 1);
+	    }
+
+	   
+	    while (d.getMonth()+1 === month) 
+	    {
+	        wednesdays.push(new Date(d.getTime()));
+	        d.setDate(d.getDate() + 7);
+	    }
+	    document.write(wednesdays + "<br>");
+	}
+     getWednesday();
+	}
+
+else if(day==4)
+{
+
+		function getThrusday()
+		 {
+	       var d = new Date();
+	       var month = d.getMonth() +1;
+	       var thrusdays = [];
+
+	      d.setDate(1);
+
+	    
+	    while (d.getDay() !== 4) 
+	    {
+	        d.setDate(d.getDate() + 1);
+	    }
+
+	   
+	    while (d.getMonth()+1 === month) 
+	    {
+	        thrusdays.push(new Date(d.getTime()));
+	        d.setDate(d.getDate() + 7);
+	    }
+	    document.write(thrusdays + "<br>");
+	}
+     getThrusday();
+}
+
+else if(day==5)
+{
+	function getFridays()
+		 {
+	       var d = new Date();
+	       var month = d.getMonth() +1;
+	       var friday = [];
+
+	      d.setDate(1);
+
+	    
+	    while (d.getDay() !== 5) 
+	    {
+	        d.setDate(d.getDate() + 1);
+	    }
+
+	   
+	    while (d.getMonth()+1 === month) 
+	    {
+	        friday.push(new Date(d.getTime()));
+	        d.setDate(d.getDate() + 7);
+	    }
+	    document.write(friday + "<br>");
+	}
+     getFridays();
+}
+
+else if(day==6)
+{
+	function getSaturdays()
+		 {
+	       var d = new Date();
+	       var month = d.getMonth() +1;
+	       var saturday = [];
+
+	      d.setDate(1);
+
+	    
+	    while (d.getDay() !== 6) 
+	    {
+	        d.setDate(d.getDate() + 1);
+	    }
+
+	   
+	    while (d.getMonth()+1 === month) 
+	    {
+	        saturday.push(new Date(d.getTime()));
+	        d.setDate(d.getDate() + 7);
+	    }
+	    document.write(saturday + "<br>");
+	}
+     getSaturdays();
+}
+</script>
+</head>
+<body>
+
+
+
+</body>
+</html>
+
