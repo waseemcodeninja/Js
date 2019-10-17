@@ -4,6 +4,7 @@
 	<title>Js</title>
 	<script>
 	var day = prompt('Enter 0 for all sundays \n 1 for all mondays \n 2 for all tuesdays \n 3 for all wednesdays \n 4 for all thrusdays \n 5 for all fridays \n 6 for all saturdays');
+
 	if (day==0) 
 	{
 		function getSundays()
@@ -14,14 +15,13 @@
 
 		    d.setDate(1);
 
-		    
-		    while (d.getDay() !== 0) 
+		    while(d.getDay() !== 0) 
 		    {
 		        d.setDate(d.getDate() + 1);
 		    }
 
 		   
-		    while (d.getMonth()+1 === month) 
+		    while(d.getMonth()+1 === month) 
 		    {
 		        sundays.push(new Date(d.getTime()));
 		        d.setDate(d.getDate() + 7);
