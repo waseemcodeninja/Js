@@ -1,0 +1,42 @@
+<script>
+	function getDays(n)
+		 {
+	       var map_to_num={
+				       	"Sunday":0, 
+				       	"Monday":1, 
+				       	"Tuesday":2, 
+				       	"Wednesday":3,
+				       	 "Thrusday":4, 
+				       	 "Friday":5,
+				       	 "Saturday":6
+				       	};
+
+            n=map_to_num[n];
+
+	       var d = new Date();
+	       var month = d.getMonth() +1;
+	       var days = [];
+         //set date of month to 1
+	      d.setDate(1);
+         //get the single day
+	    while (d.getDay() !== n) 
+	    {
+	        d.setDate(d.getDate() + 1);
+	    }
+        //get the days of whole month
+	    while (d.getMonth()+1 === month) 
+	    {
+	    	//get date in e.g monday oct 21 formate
+	       var dt=new Date(d.getTime()).toDateString();
+	       //get the date with slice year 
+	       days.push(dt.slice(0,dt.lastIndexOf(" ")));
+	       //setting date by increase 7 days in the current date
+	       d.setDate(d.getDate() + 7);
+	    }
+	   
+	    //output days array
+	    console.log(days);
+	}
+
+     getDays("Monday");
+</script>

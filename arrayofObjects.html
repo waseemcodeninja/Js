@@ -1,0 +1,26 @@
+<script>
+	
+ var arrayOfObjects = [
+	  {
+	   value1: 50, 
+	  },
+	  { 
+	  	value2: 100,
+	  	value3: 600
+	  },
+	  { 
+	  	value4: 500,
+	  	value5: 700 
+	  }
+];
+
+/* For getting the values in a single flatten array i used flatmap() method with object.values */ 
+var total = arrayOfObjects.flatMap(Object.values);
+//reduce() method reduce the array to single value and stored in accumulator e.g result
+var result = total.reduce((a, b) => a + b, 0);
+//console the result
+console.log("Sum is : " + result);
+
+
+
+</script>

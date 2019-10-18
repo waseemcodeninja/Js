@@ -1,0 +1,36 @@
+<script>
+
+
+var arr=[];
+
+function primenumber(n)
+{
+	
+for(var x = 2; x <=n; x++)
+    {
+    	 var flag = true;
+    	 
+    	 for(var factor = 2; factor<x; factor++)
+    	 {
+		      if(x % factor === 0)
+		      {
+		      	flag = false;
+		      }
+
+	      }
+
+	      if(flag) 
+	      {
+	      	  arr.push(x);
+	      }
+
+    } 
+
+}
+
+
+primenumber(20);
+
+console.log(arr);
+
+</script>

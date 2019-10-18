@@ -1,0 +1,52 @@
+<script>
+	
+var unsortedArray = [20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1];
+
+function mergesort(inputarray) 
+{
+	 
+	 if (inputarray.length < 2) {
+
+	 	return inputarray;
+	 }
+
+	 var middle = Math.floor(inputarray.length/2);
+	 var left = inputarray.slice(0,middle);
+	 var right = inputarray.slice(middle);
+
+     
+	 return mergesortLeftandRight(mergesort(left),mergesort(right));
+
+     
+}
+
+function mergesortLeftandRight(left,right)
+{
+   
+   var resultArray = [];
+
+   while(left.length > 0 && right.length >0)
+   {
+	   	if (left[0] < right[0]) 
+	   	{
+
+	   		resultArray.push(left.shift());
+
+	   	}
+	   	else 
+	   	{
+	   		resultArray.push(right.shift());
+	   	}
+
+   }
+
+  return resultArray.concat(left,right);
+   
+
+
+}
+
+console.log(mergesort(unsortedArray));
+
+
+</script>
